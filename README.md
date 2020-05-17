@@ -6,8 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](http://xyz.com)
-- [Travis Link](https://travis-ci.com/github/ruwaid-401-advanced-javascript/notes)
+- [submission PR](https://github.com/ruwaid-401-advanced-javascript/notes/pull/1)
 
 
 ### Modules
