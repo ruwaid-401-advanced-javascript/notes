@@ -1,4 +1,4 @@
-# LAB - Class 01
+# LAB - Class 02
 
 ## Project: Notes
 
@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/ruwaid-401-advanced-javascript/notes/pull/1)
+- [submission PR](https://github.com/ruwaid-401-advanced-javascript/notes/pull/2)
 
 
 ### Modules
@@ -22,6 +22,7 @@
 #### How to use your library 
 #### Tests
 - Lint test: `npm run lint`
+- unit test: `npm test`
 
 #### UML
 
