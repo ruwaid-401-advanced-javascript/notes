@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1589829948231" clover="3.2.0">
+  <project timestamp="1589829948231" name="All files">
+    <metrics statements="15" coveredstatements="15" conditionals="13" coveredconditionals="13" methods="6" coveredmethods="6" elements="34" coveredelements="34" complexity="0" loc="15" ncloc="15" packages="1" files="2" classes="2"/>
+    <file name="input.js" path="/mnt/c/Users/STD/Desktop/courses/401d3/notes/lib/input.js">
+      <metrics statements="8" coveredstatements="8" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
+      <line num="8" count="6" type="stmt"/>
+      <line num="12" count="11" type="cond" truecount="6" falsecount="0"/>
+      <line num="13" count="8" type="stmt"/>
+      <line num="17" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="18" count="3" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+    </file>
+    <file name="notes.js" path="/mnt/c/Users/STD/Desktop/courses/401d3/notes/lib/notes.js">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="9" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
