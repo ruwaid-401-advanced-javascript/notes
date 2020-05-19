@@ -1,4 +1,4 @@
-# LAB - Class 02
+# LAB - Class 03
 
 ## Project: Notes
 
@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/ruwaid-401-advanced-javascript/notes/pull/2)
+- [submission PR](https://github.com/ruwaid-401-advanced-javascript/notes/pull/3)
 
 
 ### Modules

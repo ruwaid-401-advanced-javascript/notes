@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 // connecting to my DB 
 const MONGOOSE_URI = 'mongodb://localhost:27017/notes';
 // mongo docs says to stick to this
-mongoose.connect(MONGOOSE_URI, { useUnifiedTopology: true });
+mongoose.connect(MONGOOSE_URI, { userNewUrlParse: true, useUnifiedTopology: true });
 
 async function allPrograme() {
   const arg = new Input();
