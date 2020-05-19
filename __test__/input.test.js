@@ -19,6 +19,8 @@ describe('Input Module', ()=> {
     let options = new Input();
     expect(options.getMethod({a:'hiii'})).toEqual({ action: 'add', payload: 'hiii' });
     expect(options.getMethod({add:'woow'})).toEqual({ action: 'add', payload: 'woow' });
+    expect(options.getMethod({delete:'5846845154987'})).toEqual({ action: 'delete', id: '5846845154987' });
+    expect(options.getMethod({list:true, category:'hi'})).toEqual({ action: 'list', category: 'hi' });
 
   });
 

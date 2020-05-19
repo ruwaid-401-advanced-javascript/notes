@@ -1,27 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589829948231" clover="3.2.0">
-  <project timestamp="1589829948231" name="All files">
-    <metrics statements="15" coveredstatements="15" conditionals="13" coveredconditionals="13" methods="6" coveredmethods="6" elements="34" coveredelements="34" complexity="0" loc="15" ncloc="15" packages="1" files="2" classes="2"/>
-    <file name="input.js" path="/mnt/c/Users/STD/Desktop/courses/401d3/notes/lib/input.js">
-      <metrics statements="8" coveredstatements="8" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="7" count="6" type="stmt"/>
-      <line num="8" count="6" type="stmt"/>
-      <line num="12" count="11" type="cond" truecount="6" falsecount="0"/>
-      <line num="13" count="8" type="stmt"/>
-      <line num="17" count="6" type="cond" truecount="4" falsecount="0"/>
-      <line num="18" count="3" type="stmt"/>
-      <line num="22" count="1" type="stmt"/>
-    </file>
-    <file name="notes.js" path="/mnt/c/Users/STD/Desktop/courses/401d3/notes/lib/notes.js">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-      <line num="5" count="3" type="stmt"/>
-      <line num="9" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="10" count="2" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="17" count="1" type="stmt"/>
-      <line num="21" count="1" type="stmt"/>
-    </file>
+<coverage generated="1589898271238" clover="3.2.0">
+  <project timestamp="1589898271238" name="All files">
+    <metrics statements="28" coveredstatements="22" conditionals="23" coveredconditionals="19" methods="8" coveredmethods="6" elements="59" coveredelements="47" complexity="0" loc="28" ncloc="28" packages="2" files="3" classes="3"/>
+    <package name="lib">
+      <metrics statements="25" coveredstatements="19" conditionals="23" coveredconditionals="19" methods="8" coveredmethods="6"/>
+      <file name="input.js" path="/mnt/c/Users/STD/Desktop/courses/401d3/notes/lib/input.js">
+        <metrics statements="10" coveredstatements="10" conditionals="15" coveredconditionals="15" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="12" count="13" type="cond" truecount="6" falsecount="0"/>
+        <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="19" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="notes.js" path="/mnt/c/Users/STD/Desktop/courses/401d3/notes/lib/notes.js">
+        <metrics statements="15" coveredstatements="9" conditionals="8" coveredconditionals="4" methods="5" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="models">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="notes-schema.js" path="/mnt/c/Users/STD/Desktop/courses/401d3/notes/models/notes-schema.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
