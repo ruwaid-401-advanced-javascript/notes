@@ -1,6 +1,6 @@
 'use strict';
-// implement the CRUD operations in food class.
-// interface to communicate with food schema.
+// implement the CRUD operations in notes class.
+// interface to communicate with notes schema.
 const schema = require('./notes-schema');
 
 class NotesCRUD {
@@ -12,8 +12,7 @@ class NotesCRUD {
   async get(category) {
     // if you pass an id for me i will get you the record by id
     if (category) {
-      //    return schema.findById(_id);
-      return await schema.findOne({ category: category });
+      return await schema.find({'category':category});
     } else {
       // else I think you mean to fetch everything
       return await schema.find({});
