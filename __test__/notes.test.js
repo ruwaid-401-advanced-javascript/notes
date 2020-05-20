@@ -27,6 +27,20 @@ describe('Notes Module', ()=> {
     expect(console.log).toHaveBeenCalled();
   });
 
+  it('execute() with delete method ', () =>{
+    let options = new Notes();
+    let input ={method:{action: 'delete', id: '5ec42429d7c4e1070fc613c6'}};
+    options.execute(input);
+    expect(console.log).toHaveBeenCalled();
+  });
+
+  it('execute() with list method ', () =>{
+    let options = new Notes();
+    let input ={method:{action: 'list', category: 'school'}};
+    options.execute(input);
+    expect(console.log).toHaveBeenCalled();
+  });
+
   it('add() with correct method and a msg', () =>{
     let options = new Notes();
     let input ={method:{action: 'add', payload: 'hiii', category: 'school'}};
@@ -38,6 +52,13 @@ describe('Notes Module', ()=> {
     let options = new Notes();
     let input ={method:{action: 'delete', id: '5ec42429d7c4e1070fc613c6'}};
     options.delete(input);
+    expect(console.log).toHaveBeenCalled();
+  });
+
+  it('list()', () =>{
+    let options = new Notes();
+    let input ={method:{action: 'list', category: true}};
+    options.list(input);
     expect(console.log).toHaveBeenCalled();
   });
 
