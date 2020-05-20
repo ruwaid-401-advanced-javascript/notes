@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/ruwaid-401-advanced-javascript/notes#readme",
   "dependencies": {
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "mongoose": "^5.9.15"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
