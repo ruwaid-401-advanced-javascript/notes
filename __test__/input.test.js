@@ -21,7 +21,9 @@ describe('Input Module', () => {
     expect(options.getMethod({ add: 'woow' })).toEqual({ action: 'add', payload: 'woow' });
     expect(options.getMethod({ delete: '5846845154987' })).toEqual({ action: 'delete', id: '5846845154987' });
     expect(options.getMethod({ list: true })).toEqual({ action: 'list', category: true });
-
+    expect(options.getMethod({ d: '5846845154987' })).toEqual({ action: 'delete', id: '5846845154987' });
+    expect(options.getMethod({ l: true })).toEqual({ action: 'list', category: true });
+    expect(options.getMethod({ update: '5846845154987',m:'test new msg' })).toEqual({ action: 'update', payload: 'test new msg', id: '5846845154987' });
   });
 
   it('getMsg() without a msg', () => {
@@ -39,5 +41,10 @@ describe('Input Module', () => {
     expect(options.getMsg('woow')).toEqual({ action: 'add', payload: 'woow' });
   });
 
-
+  it('newMsg() with a new msg', () => {
+    let options = new Input();
+    expect(options.newMsg('test new msg','5846845154987')).toEqual({ action: 'update', payload: 'test new msg', id: '5846845154987' });
+    expect(options.newMsg()).toEqual('msg error: ops u forget to write the new msg');
+  });
+  
 });

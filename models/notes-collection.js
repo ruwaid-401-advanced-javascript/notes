@@ -24,8 +24,8 @@ class NotesCRUD {
     return await newRecord.save();
   }
 
-  async update(_id, record) {
-    return await schema.findByIdAndUpdate(_id, record);
+  async update(_id, text) {
+    return await schema.findByIdAndUpdate(_id, {text});
   }
 
   async delete(_id) {

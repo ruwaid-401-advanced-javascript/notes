@@ -23,6 +23,7 @@
     "mongoose": "^5.9.15"
   },
   "devDependencies": {
+    "@code-fellows/supergoose": "^1.0.2",
     "eslint": "^7.0.0",
     "jest": "^26.0.1"
   }
