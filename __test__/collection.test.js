@@ -30,7 +30,7 @@ describe('note Model', () => {
     let obj = { text: 'test text 2', category: 'tesla test' };
 
     let allObjects = [{ text: 'test text 1', category: 'school test' },
-    { text: 'test text 2', category: 'tesla test' },
+      { text: 'test text 2', category: 'tesla test' },
     ];
 
     return note.create(obj)
