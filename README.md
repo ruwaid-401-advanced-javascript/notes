@@ -1,4 +1,4 @@
-# LAB - Class 03
+# LAB - Class 04
 
 ## Project: Notes
 
@@ -6,8 +6,8 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/ruwaid-401-advanced-javascript/notes/pull/3)
-- [Github actions](https://github.com/ruwaid-401-advanced-javascript/notes/pull/3/checks)
+- [submission PR](https://github.com/ruwaid-401-advanced-javascript/notes/pull/4)
+- [Github actions](https://github.com/ruwaid-401-advanced-javascript/notes/pull/4/checks)
 
 ### Modules
 #### `input.js`

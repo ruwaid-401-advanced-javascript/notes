@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.65% </span>
+                <span class="strong">96.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>22/23</span>
+                <span class='fraction'>29/30</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95% </span>
+                <span class="strong">96.15% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/20</span>
+                <span class='fraction'>25/26</span>
             </div>
         
             
@@ -103,8 +103,20 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -113,6 +125,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -123,10 +136,15 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -138,10 +156,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,7 +173,8 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
-const NotesSchema = require('../models/notes-schema');
+const NotesColection = require('../models/notes-collection');
+const notesColection = new NotesColection();
 &nbsp;
 class Notes {
   constructor() {
@@ -162,34 +185,44 @@ class Notes {
     if (operation.method.action === 'add') return this.add(operation);
     if (operation.method.action === 'list') return this.list(operation);
     if (operation.method.action === 'delete') return this.delete(operation);
+    if (operation.method.action === 'update') return this.update(operation);
     else { console.log(operation.method); }
   }
 &nbsp;
   async add(operation) {
     let entry = { text: operation.method.payload, category: operation.method.category };
     console.log('note saved ', entry.text);
-    let newNote = new NotesSchema(entry);
-    await newNote.save();
+    await notesColection.create(entry);
   }
 &nbsp;
   async delete(DataToDelete) {
     console.log('Deleted Note ', DataToDelete.method.id);
-    await NotesSchema.findByIdAndRemove(DataToDelete.method.id);
+    await notesColection.delete(DataToDelete.method.id);
+  }
+&nbsp;
+  async update(operation){
+    let entry = { text: operation.method.payload, id: operation.method.id };
+    console.log('note updated ', entry.text);
+    await notesColection.update(entry.id,entry.text);
   }
 &nbsp;
   async list(categoryToList) {
     let needToTest = categoryToList.method.category;
-    let data = needToTest !== true ? await NotesSchema.find({ category: needToTest }) : await NotesSchema.find({});
+    let data = needToTest !== true ? await notesColection.get(needToTest) : await notesColection.get();  
 <span class="cstat-no" title="statement not covered" >    this.displayStyle(data);</span>
   }
 &nbsp;
   displayStyle(data) {
-    data.forEach(e =&gt; {
-      console.log();
-      console.log(e.text);
-      console.log('Category:', e.category, 'ID:', e._id);
-      console.log('-----------------------------------');
-    });
+    if(data.length){
+      data.forEach(e =&gt; {
+        console.log();
+        console.log(e.text);
+        console.log('Category:', e.category, 'ID:', e._id);
+        console.log('-----------------------------------');
+      });
+    }else{
+      console.log('No data find');
+    }
   }
 &nbsp;
 }
@@ -202,7 +235,7 @@ module.exports = Notes;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed May 20 2020 02:46:48 GMT+0300 (Eastern European Summer Time)
+                at Thu May 21 2020 23:30:07 GMT+0300 (Eastern European Summer Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
