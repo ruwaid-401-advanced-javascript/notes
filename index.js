@@ -13,7 +13,7 @@
  * list all data in  the database --> node index.js --list
  * list specific category --> node index.js --list <category name>
  * update notes --> node index.js --update <note ID> --newnote <your new note>
- * delete notes --> node .index.js --delete <note ID>
+ * delete notes --> node index.js --delete <note ID>
  * you can use shortcut for the arguments --> add: a, list: l, update: u, delete: d , category: c, newnote: n
  */
 
