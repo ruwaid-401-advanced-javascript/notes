@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.67% </span>
+                <span class="strong">96.88% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>29/30</span>
+                <span class='fraction'>31/32</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>12/14</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.15% </span>
+                <span class="strong">96.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/26</span>
+                <span class='fraction'>26/27</span>
             </div>
         
             
@@ -114,10 +114,24 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -125,34 +139,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,6 +191,11 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
+/**
+ * Execute the commands that passed from input module 
+ * @module notes
+ */
+require('colors');
 const NotesColection = require('../models/notes-collection');
 const notesColection = new NotesColection();
 &nbsp;
@@ -182,46 +205,50 @@ class Notes {
   }
 &nbsp;
   async execute(operation) {
-    if (operation.method.action === 'add') return this.add(operation);
-    if (operation.method.action === 'list') return this.list(operation);
-    if (operation.method.action === 'delete') return this.delete(operation);
-    if (operation.method.action === 'update') return this.update(operation);
-    else { console.log(operation.method); }
+    if (operation.error) return console.log(operation.error.red);
+    if (operation.action === 'add') return this.add(operation);
+    if (operation.action === 'list') return this.list(operation);
+    if (operation.action === 'delete') return this.delete(operation);
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (operation.action === 'update') return this.update(operation);
   }
 &nbsp;
   async add(operation) {
-    let entry = { text: operation.method.payload, category: operation.method.category };
-    console.log('note saved ', entry.text);
+    let entry = { text: operation.payload, category: operation.category };
+    console.log('Note saved '.white, entry.text.blue);
     await notesColection.create(entry);
   }
 &nbsp;
   async delete(DataToDelete) {
-    console.log('Deleted Note ', DataToDelete.method.id);
-    await notesColection.delete(DataToDelete.method.id);
+    console.log('Deleted Note '.white, DataToDelete.id.blue);
+    await notesColection.delete(DataToDelete.id);
   }
 &nbsp;
   async update(operation){
-    let entry = { text: operation.method.payload, id: operation.method.id };
-    console.log('note updated ', entry.text);
+    let entry = { text: operation.payload, id: operation.id };
+    console.log('note updated '.white, entry.text.blue);
     await notesColection.update(entry.id,entry.text);
   }
 &nbsp;
   async list(categoryToList) {
-    let needToTest = categoryToList.method.category;
-    let data = needToTest !== true ? await notesColection.get(needToTest) : await notesColection.get();  
+    let needToTest = categoryToList.category;
+    let data = needToTest !== true ? await notesColection.get(needToTest) : <span class="branch-1 cbranch-no" title="branch not covered" >await notesColection.get();  </span>
 <span class="cstat-no" title="statement not covered" >    this.displayStyle(data);</span>
   }
-&nbsp;
+  /**
+ * Display list - will display the note list 
+ * @param data
+ * @function displayStyle
+ */
   displayStyle(data) {
     if(data.length){
       data.forEach(e =&gt; {
         console.log();
-        console.log(e.text);
-        console.log('Category:', e.category, 'ID:', e._id);
-        console.log('-----------------------------------');
+        console.log(e.text.cyan);
+        console.log('Category:'.white, e.category.blue, 'ID:'.white, e._id);
+        console.log('-----------------------------------'.gray);
       });
     }else{
-      console.log('No data find');
+      console.log('No data found');
     }
   }
 &nbsp;
@@ -235,7 +262,7 @@ module.exports = Notes;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu May 21 2020 23:30:07 GMT+0300 (Eastern European Summer Time)
+                at Sat May 23 2020 00:33:59 GMT+0300 (Eastern European Summer Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
