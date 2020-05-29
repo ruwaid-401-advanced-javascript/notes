@@ -21,5 +21,6 @@ describe('Input Module', () => {
     expect(options.getMethod({ add: true }))
       .toEqual({ action: 'add', category: undefined, id: undefined, payload: true, error: 'note error: ops u forget to write note' });
     expect(options.getMethod({ help: true })).toEqual();
+    expect(options.getMethod({ doc: true })).toEqual({ action: 'server', category: undefined, id: undefined, payload: undefined, error: null });
   });
 });

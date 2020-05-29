@@ -14,6 +14,10 @@
 ### `notes.js`
 
 ### Setup
+.env requirements 
+
+`PORT` - Port Number
+`MONGODB_URI` - URL to the running mongo instance/db
 
 #### How to initialize/run your application 
 
@@ -26,6 +30,7 @@
  * update notes --> `node index.js --update <note ID> --newnote <your new note>`
  * delete notes --> `node .index.js --delete <note ID>`
  * you can use shortcut for the arguments --> `add: a, list: l, update: u, delete: d , category: c, newnote: n`
+ * to see the full documentation type --> `node index.js --documentation` OR `node index.js --doc`
 
 #### How to use your library 
 #### Tests
